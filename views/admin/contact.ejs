@@ -1,0 +1,57 @@
+<%- include("../header.ejs") %>
+
+<section class="dashboard-wrap mtb-40">
+  <div class="container">
+    <div class="body-content">
+      <div class="row">
+        <div class="col-md-3"style="box-shadow: 2px 2px 8px red;">
+          <div class="dash-left">
+            <ul>
+              <li class="active"><a href="/admin/dashboard">Dashboard</a></li>
+              <li><a href="/admin/blog" class="active">Blogs</a></li>
+              <li><a href="/admin/category">Categories</a></li>
+              <li><a href="/admin/contact">Contact</a></li>
+              <li><a href="/admin/about">About</a></li>
+              <li><a href="/logout">Logout</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-9">
+          <div class="dash-right">
+            <table class="table table-bordered table-striped">
+              <tr>
+                <th>S.No</th>
+                <th>Name</th>
+                <th>E-mail</th>
+              
+                <th>Phone no</th>
+                <th>Message</th>
+              </tr>
+              <% d.forEach((b)=>{ %>
+
+                <tr>
+                  <td><%= b._id %></td>
+                 
+                  <td><%= b.name %></td>
+                  <td><%= b.email %></td>
+                  <td><%= b.phone %></td>
+                  <td><%= b.message %></td>
+                
+                </tr>
+                <% }) %>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+           
+          
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<%- include("../footer.ejs") %>

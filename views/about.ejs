@@ -1,0 +1,29 @@
+<%- include('header.ejs')%>
+<section class="cmspage mtb-40">
+    <div class="container">
+      <h1 style="text-shadow: 2px 2px 8px;">About</h1>
+      <div class="page-desc "style="text-shadow: 1px 1px 2px;" >
+     <% b.forEach((item)=>{   %>
+      <div class="form-group form-row">
+        <label class="col-md-3 required">About *</label>
+        <div class="col-md-9">
+          <textarea
+            name="description"
+            rows="5"
+            class="form-control"
+            placeholder="About"
+            style="border: none;"
+            required
+           
+            name="description"
+          
+          ><%= item.description %></textarea>
+        </div>
+      </div>
+
+    <% })%>  %>
+         
+      </div>
+    </div>
+</section>
+<%- include('footer.ejs')%>
